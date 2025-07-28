@@ -3,7 +3,7 @@
   connection: local
   tasks:
     - name: Apply deployment
-      command: kubectl apply -f ./k8s/deployment.yaml
+      command: kubectl apply -f "{{ lookup('env','WORKSPACE') }}/k8s/deployment.yaml"
 
     - name: Apply service
-      command: kubectl apply -f ./k8s/service.yaml
+      command: kubectl apply -f "{{ lookup('env','WORKSPACE') }}/k8s/service.yaml"
