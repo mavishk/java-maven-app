@@ -5,4 +5,4 @@
       command: kubectl apply -f k8s/deployment.yaml
 
     - name: Apply service
-      command: kubectl apply -f k8s/service.yaml
+      command: kubectl apply -f /root/java-maven-app/k8s/service.yaml
