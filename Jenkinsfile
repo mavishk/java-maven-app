@@ -10,13 +10,6 @@ pipeline {
         maven 'Maven3'
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/mavishk/java-maven-app.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean package'
