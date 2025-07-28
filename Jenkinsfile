@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/mavishk/java-maven-app.git'
+                git branch: 'main', url: 'https://github.com/mavishk/java-maven-app.git'
             }
         }
 
